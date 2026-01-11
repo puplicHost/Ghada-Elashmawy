@@ -108,36 +108,57 @@
 
     <!-- Navigation (From Hero) -->
     <div class="relative w-full flex flex-col overflow-x-hidden">
-        <header
-            class="fixed top-0 left-0 right-0 z-50 flex items-center justify-between border-b border-solid border-zinc-200 dark:border-zinc-800 px-3 sm:px-6 md:px-16 py-3 md:py-4 bg-background-light/95 dark:bg-background-dark/95 backdrop-blur-md transition-all duration-300">
-            <div class="flex items-center gap-1.5 sm:gap-4 z-50 flex-1 min-w-0 mr-1">
-                <div class="size-4 sm:size-6 text-zinc-900 dark:text-white shrink-0">
-                    <svg fill="none" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+        <header id="main-header"
+            class="fixed top-0 left-0 right-0 z-50 flex items-center justify-between border-b border-zinc-200 dark:border-zinc-800 md:border-transparent px-3 sm:px-6 md:px-16 py-3 md:py-6 bg-background-light dark:bg-background-dark md:bg-transparent transition-all duration-500">
+            <div class="flex items-center gap-2 sm:gap-4 z-50 flex-1 min-w-0">
+                <div class="size-6 sm:size-8 text-zinc-900 dark:text-white shrink-0 group cursor-pointer">
+                    <svg class="group-hover:rotate-12 transition-transform duration-500 w-full h-full" fill="none"
+                        viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
                         <path clip-rule="evenodd"
                             d="M39.475 21.6262C40.358 21.4363 40.6863 21.5589 40.7581 21.5934C40.7876 21.655 40.8547 21.857 40.8082 22.3336C40.7408 23.0255 40.4502 24.0046 39.8572 25.2301C38.6799 27.6631 36.5085 30.6631 33.5858 33.5858C30.6631 36.5085 27.6632 38.6799 25.2301 39.8572C24.0046 40.4502 23.0255 40.7407 22.3336 40.8082C21.8571 40.8547 21.6551 40.7875 21.5934 40.7581C21.5589 40.6863 21.4363 40.358 21.6262 39.475C21.8562 38.4054 22.4689 36.9657 23.5038 35.2817C24.7575 33.2417 26.5497 30.9744 28.7621 28.762C30.9744 26.5497 33.2417 24.7574 35.2817 23.5037C36.9657 22.4689 38.4054 21.8562 39.475 21.6262ZM4.41189 29.2403L18.7597 43.5881C19.8813 44.7097 21.4027 44.9179 22.7217 44.7893C24.0585 44.659 25.5148 44.1631 26.9723 43.4579C29.9052 42.0387 33.2618 39.5667 36.4142 36.4142C39.5667 33.2618 42.0387 29.9052 43.4579 26.9723C44.1631 25.5148 44.659 24.0585 44.7893 22.7217C44.9179 21.4027 44.7097 19.8813 43.5881 18.7597L29.2403 4.41187C27.8527 3.02428 25.8765 3.02573 24.2861 3.36776C22.6081 3.72863 20.7334 4.58419 18.8396 5.74801C16.4978 7.18716 13.9881 9.18353 11.5858 11.5858C9.18354 13.988 7.18717 16.4978 5.74802 18.8396C4.58421 20.7334 3.72865 22.6081 3.36778 24.2861C3.02574 25.8765 3.02429 27.8527 4.41189 29.2403Z"
                             fill="currentColor" fill-rule="evenodd"></path>
                     </svg>
                 </div>
                 <h2
-                    class="text-zinc-900 dark:text-white text-[10px] sm:text-sm md:text-xl font-extrabold leading-tight tracking-tight sm:tracking-[-0.05em] uppercase truncate">
+                    class="text-zinc-900 dark:text-white text-[11px] sm:text-base md:text-xl font-black leading-tight tracking-tight uppercase truncate">
                     GHADA ELASHMAWY</h2>
             </div>
             <div class="hidden md:flex flex-1 justify-end gap-12 items-center">
                 <nav class="flex items-center gap-10">
-                    <a class="text-zinc-600 dark:text-primary/70 hover:text-zinc-900 dark:hover:text-primary text-xs font-bold uppercase tracking-widest transition-colors"
-                        href="#home">Home</a>
-                    <a class="text-zinc-600 dark:text-primary/70 hover:text-zinc-900 dark:hover:text-primary text-xs font-bold uppercase tracking-widest transition-colors"
-                        href="#about">About</a>
-                    <a class="text-zinc-600 dark:text-primary/70 hover:text-zinc-900 dark:hover:text-primary text-xs font-bold uppercase tracking-widest transition-colors"
-                        href="#projects">Case Studies</a>
-                    <a class="text-zinc-600 dark:text-primary/70 hover:text-zinc-900 dark:hover:text-primary text-xs font-bold uppercase tracking-widest transition-colors"
-                        href="#services">Services</a>
-                    <a class="text-zinc-600 dark:text-primary/70 hover:text-zinc-900 dark:hover:text-primary text-xs font-bold uppercase tracking-widest transition-colors"
-                        href="#contact">Contact</a>
+                    <a class="nav-link text-zinc-400 hover:text-zinc-900 dark:hover:text-primary text-[10px] font-bold uppercase tracking-[0.3em] transition-all relative group"
+                        href="#home">
+                        Home
+                        <span
+                            class="absolute -bottom-1 left-0 w-0 h-[1px] bg-primary transition-all group-hover:w-full"></span>
+                    </a>
+                    <a class="nav-link text-zinc-400 hover:text-zinc-900 dark:hover:text-primary text-[10px] font-bold uppercase tracking-[0.3em] transition-all relative group"
+                        href="#about">
+                        About
+                        <span
+                            class="absolute -bottom-1 left-0 w-0 h-[1px] bg-primary transition-all group-hover:w-full"></span>
+                    </a>
+                    <a class="nav-link text-zinc-400 hover:text-zinc-900 dark:hover:text-primary text-[10px] font-bold uppercase tracking-[0.3em] transition-all relative group"
+                        href="#projects">
+                        Projects
+                        <span
+                            class="absolute -bottom-1 left-0 w-0 h-[1px] bg-primary transition-all group-hover:w-full"></span>
+                    </a>
+                    <a class="nav-link text-zinc-400 hover:text-zinc-900 dark:hover:text-primary text-[10px] font-bold uppercase tracking-[0.3em] transition-all relative group"
+                        href="#services">
+                        Services
+                        <span
+                            class="absolute -bottom-1 left-0 w-0 h-[1px] bg-primary transition-all group-hover:w-full"></span>
+                    </a>
+                    <a class="nav-link text-zinc-400 hover:text-zinc-900 dark:hover:text-primary text-[10px] font-bold uppercase tracking-[0.3em] transition-all relative group"
+                        href="#contact">
+                        Contact
+                        <span
+                            class="absolute -bottom-1 left-0 w-0 h-[1px] bg-primary transition-all group-hover:w-full"></span>
+                    </a>
                 </nav>
                 <div class="hidden lg:block">
-                    <a href="mailto:hello@ghadamarketing.com"
-                        class="flex min-w-[120px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-11 px-6 bg-zinc-900 dark:bg-primary text-white dark:text-background-dark text-xs font-bold uppercase tracking-widest transition-transform hover:scale-105 active:scale-95">
+                    <a href="mailto:elashmawyghada89@gmail.com"
+                        class="flex min-w-[120px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-11 px-6 bg-zinc-900 dark:bg-primary text-white dark:text-background-dark text-[10px] font-bold uppercase tracking-[0.2em] transition-all hover:scale-105 active:scale-95 shadow-xl shadow-primary/10">
                         <span class="truncate">Hire Me</span>
                     </a>
                 </div>
@@ -147,61 +168,126 @@
                 <span class="material-symbols-outlined text-2xl sm:text-3xl">menu</span>
             </button>
 
-            <!-- Mobile Menu Overlay -->
+            <!-- Mobile Menu Overlay Background -->
+            <div id="mobile-menu-overlay"
+                class="fixed inset-0 bg-black/60 backdrop-blur-sm z-40 opacity-0 pointer-events-none transition-opacity duration-500">
+            </div>
+
+            <!-- Mobile Menu Drawer (Slides from Right) -->
             <div id="mobile-menu"
-                class="fixed inset-0 bg-background-light dark:bg-background-dark z-40 flex flex-col justify-center items-center opacity-0 pointer-events-none transition-opacity duration-300">
-                <nav class="flex flex-col items-center gap-6 px-6">
-                    <a class="mobile-link text-xl sm:text-2xl font-bold uppercase tracking-widest text-zinc-900 dark:text-white hover:text-zinc-600 dark:hover:text-primary transition-colors"
+                class="fixed top-0 right-0 bottom-0 w-[80%] max-w-[320px] bg-background-light dark:bg-background-dark z-50 flex flex-col p-10 transform translate-x-full transition-transform duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] shadow-[-20px_0_60px_-15px_rgba(0,0,0,0.3)] border-l border-zinc-200 dark:border-zinc-800">
+                <div class="flex justify-end mb-12">
+                    <button id="mobile-menu-close" class="text-zinc-900 dark:text-white p-2">
+                        <span class="material-symbols-outlined text-4xl">close</span>
+                    </button>
+                </div>
+                <nav class="flex flex-col gap-8">
+                    <a class="mobile-link text-2xl font-black uppercase tracking-tighter text-zinc-400 hover:text-zinc-900 dark:hover:text-primary transition-all duration-300"
                         href="#home">Home</a>
-                    <a class="mobile-link text-xl sm:text-2xl font-bold uppercase tracking-widest text-zinc-900 dark:text-white hover:text-zinc-600 dark:hover:text-primary transition-colors"
+                    <a class="mobile-link text-2xl font-black uppercase tracking-tighter text-zinc-400 hover:text-zinc-900 dark:hover:text-primary transition-all duration-300"
                         href="#about">About</a>
-                    <a class="mobile-link text-xl sm:text-2xl font-bold uppercase tracking-widest text-zinc-900 dark:text-white hover:text-zinc-600 dark:hover:text-primary transition-colors"
-                        href="#projects">Case Studies</a>
-                    <a class="mobile-link text-xl sm:text-2xl font-bold uppercase tracking-widest text-zinc-900 dark:text-white hover:text-zinc-600 dark:hover:text-primary transition-colors"
+                    <a class="mobile-link text-2xl font-black uppercase tracking-tighter text-zinc-400 hover:text-zinc-900 dark:hover:text-primary transition-all duration-300"
+                        href="#projects">Projects</a>
+                    <a class="mobile-link text-2xl font-black uppercase tracking-tighter text-zinc-400 hover:text-zinc-900 dark:hover:text-primary transition-all duration-300"
                         href="#services">Services</a>
-                    <a class="mobile-link text-xl sm:text-2xl font-bold uppercase tracking-widest text-zinc-900 dark:text-white hover:text-zinc-600 dark:hover:text-primary transition-colors"
+                    <a class="mobile-link text-2xl font-black uppercase tracking-tighter text-zinc-400 hover:text-zinc-900 dark:hover:text-primary transition-all duration-300"
                         href="#contact">Contact</a>
-                    <a href="mailto:hello@ghadamarketing.com"
-                        class="mt-4 px-6 sm:px-8 py-3 bg-zinc-900 dark:bg-primary text-white dark:text-background-dark text-sm font-bold uppercase tracking-widest rounded-full transition-transform hover:scale-105 active:scale-95">
-                        Hire Me
-                    </a>
+
+                    <div class="mt-8 pt-8 border-t border-zinc-100 dark:border-zinc-800 flex flex-col gap-6">
+                        <a href="mailto:elashmawyghada89@gmail.com"
+                            class="flex items-center justify-center py-4 bg-zinc-900 dark:bg-primary text-white dark:text-background-dark text-[10px] font-bold uppercase tracking-[0.2em] rounded-full transition-transform hover:scale-105 active:scale-95">
+                            Hire Me
+                        </a>
+                        <p class="text-[10px] uppercase tracking-[0.4em] text-zinc-400 font-bold text-center">Cairo -
+                            Dubai - Riyadh</p>
+                    </div>
                 </nav>
             </div>
         </header>
 
         <script>
-            // Mobile Menu Toggle Logic
-            const menuBtn = document.getElementById('mobile-menu-btn');
-            const mobileMenu = document.getElementById('mobile-menu');
-            const menuIcon = menuBtn.querySelector('span');
-            const mobileLinks = document.querySelectorAll('.mobile-link');
-            let isMenuOpen = false;
-
-            menuBtn.addEventListener('click', () => {
-                isMenuOpen = !isMenuOpen;
-                if (isMenuOpen) {
-                    mobileMenu.classList.remove('opacity-0', 'pointer-events-none');
-                    mobileMenu.classList.add('opacity-100', 'pointer-events-auto');
-                    menuIcon.textContent = 'close';
-                    document.body.style.overflow = 'hidden'; // Prevent scrolling
+            // Improved Header Scroll Effect
+            const header = document.getElementById('main-header');
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 20) {
+                    header.classList.remove('py-6', 'bg-transparent', 'border-transparent');
+                    header.classList.add('py-3', 'bg-background-light/90', 'dark:bg-background-dark/90', 'backdrop-blur-xl', 'border-zinc-200', 'dark:border-zinc-800');
                 } else {
-                    mobileMenu.classList.add('opacity-0', 'pointer-events-none');
-                    mobileMenu.classList.remove('opacity-100', 'pointer-events-auto');
-                    menuIcon.textContent = 'menu';
-                    document.body.style.overflow = '';
+                    if (!isMenuOpen) {
+                        header.classList.add('py-6', 'bg-transparent', 'border-transparent');
+                        header.classList.remove('py-3', 'bg-background-light/90', 'dark:bg-background-dark/90', 'backdrop-blur-xl', 'border-zinc-200', 'dark:border-zinc-800');
+                    }
                 }
             });
 
-            // Close menu when a link is clicked
-            mobileLinks.forEach(link => {
-                link.addEventListener('click', () => {
-                    isMenuOpen = false;
-                    mobileMenu.classList.add('opacity-0', 'pointer-events-none');
-                    mobileMenu.classList.remove('opacity-100', 'pointer-events-auto');
-                    menuIcon.textContent = 'menu';
+            // Mobile Menu Drawer Logic
+            const menuBtn = document.getElementById('mobile-menu-btn');
+            const closeBtn = document.getElementById('mobile-menu-close');
+            const mobileMenu = document.getElementById('mobile-menu');
+            const menuOverlay = document.getElementById('mobile-menu-overlay');
+            const mobileLinks = document.querySelectorAll('.mobile-link');
+            let isMenuOpen = false;
+
+            const toggleMenu = (open) => {
+                isMenuOpen = open;
+                if (open) {
+                    mobileMenu.classList.remove('translate-x-full');
+                    menuOverlay.classList.remove('opacity-0', 'pointer-events-none');
+                    menuOverlay.classList.add('opacity-100', 'pointer-events-auto');
+                    document.body.style.overflow = 'hidden';
+                } else {
+                    mobileMenu.classList.add('translate-x-full');
+                    menuOverlay.classList.remove('opacity-100', 'pointer-events-auto');
+                    menuOverlay.classList.add('opacity-0', 'pointer-events-none');
                     document.body.style.overflow = '';
-                });
+                }
+            };
+
+            menuBtn.addEventListener('click', () => toggleMenu(true));
+            closeBtn.addEventListener('click', () => toggleMenu(false));
+            menuOverlay.addEventListener('click', () => toggleMenu(false));
+
+            mobileLinks.forEach(link => {
+                link.addEventListener('click', () => toggleMenu(false));
             });
+
+            // Active Link Tracking (Intersection Observer)
+            const sections = document.querySelectorAll('section[id]');
+            const navLinks = document.querySelectorAll('.nav-link');
+            const mLinks = document.querySelectorAll('.mobile-link');
+
+            const observerOptions = {
+                threshold: 0.3,
+                rootMargin: "-10% 0px -70% 0px"
+            };
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const id = entry.target.getAttribute('id');
+
+                        navLinks.forEach(link => {
+                            link.classList.remove('text-zinc-900', 'dark:text-primary');
+                            link.classList.add('text-zinc-400');
+                            if (link.getAttribute('href') === `#${id}`) {
+                                link.classList.add('text-zinc-900', 'dark:text-primary');
+                                link.classList.remove('text-zinc-400');
+                            }
+                        });
+
+                        mLinks.forEach(link => {
+                            link.classList.remove('text-zinc-900', 'dark:text-primary', 'opacity-100');
+                            link.classList.add('text-zinc-400');
+                            if (link.getAttribute('href') === `#${id}`) {
+                                link.classList.add('text-zinc-900', 'dark:text-primary', 'opacity-100');
+                                link.classList.remove('text-zinc-400');
+                            }
+                        });
+                    }
+                });
+            }, observerOptions);
+
+            sections.forEach(section => observer.observe(section));
         </script>
 
         <!-- SECTION 1: HERO (ID: home) -->
@@ -285,20 +371,59 @@
                             <div class="max-w-[580px]">
                                 <p
                                     class="text-zinc-800 dark:text-primary/90 text-lg md:text-xl font-light leading-relaxed mb-6">
-                                    I’m Ghada Elashmawy — Marketing Manager &amp; Content &amp; Growth Strategist,
-                                    specialized in Real Estate Marketing. I combine experience in real estate projects
-                                    with diverse industry insights to transform audience behavior into strategic,
-                                    results-driven content.
+                                    I’m <span class="font-bold">مسززغ</span> — Marketing Manager &amp; Content &amp;
+                                    Growth Strategist,
+                                    specialized in Real Estate Marketing and Content Strategy. My work focuses on
+                                    developing brand positioning, crafting impactful communication, and turning content
+                                    into real growth in awareness, engagement, and sales.
                                 </p>
-                                <p
-                                    class="text-zinc-600 dark:text-primary/70 text-base font-light leading-relaxed italic border-l-2 border-primary pl-4 my-6">
-                                    “Content with strategy, communication with purpose — growth that’s real, not
-                                    accidental.”
+                                <p class="text-zinc-800 dark:text-primary/90 text-base font-light leading-relaxed mb-6">
+                                    I combine my experience in real estate projects with working across different
+                                    industries, which allows me to understand audience behavior deeply and transform
+                                    insights into strategic, results-driven content.
                                 </p>
-                                <p class="text-zinc-600 dark:text-primary/70 text-sm font-light leading-relaxed">
-                                    I build digital presence from scratch, develop publishing frameworks, define brand
-                                    voice, and empower sales teams to use content as a positioning tool.
-                                </p>
+                                <div class="mb-8">
+                                    <h3
+                                        class="text-zinc-900 dark:text-white text-xs font-bold uppercase tracking-[0.2em] mb-4 opacity-70">
+                                        My experience includes:</h3>
+                                    <ul
+                                        class="space-y-3 text-zinc-600 dark:text-primary/70 text-sm font-light leading-relaxed">
+                                        <li class="flex items-start gap-3">
+                                            <span class="w-1.5 h-1.5 rounded-full bg-primary/40 mt-1.5 shrink-0"></span>
+                                            <span>Building digital presence from scratch for startups and real estate
+                                                brands</span>
+                                        </li>
+                                        <li class="flex items-start gap-3">
+                                            <span class="w-1.5 h-1.5 rounded-full bg-primary/40 mt-1.5 shrink-0"></span>
+                                            <span>Developing content strategies and publishing frameworks based on
+                                                market and customer needs</span>
+                                        </li>
+                                        <li class="flex items-start gap-3">
+                                            <span class="w-1.5 h-1.5 rounded-full bg-primary/40 mt-1.5 shrink-0"></span>
+                                            <span>Defining Brand Voice & Content Identity</span>
+                                        </li>
+                                        <li class="flex items-start gap-3">
+                                            <span class="w-1.5 h-1.5 rounded-full bg-primary/40 mt-1.5 shrink-0"></span>
+                                            <span>Empowering sales teams to use content as a selling and positioning
+                                                tool</span>
+                                        </li>
+                                        <li class="flex items-start gap-3">
+                                            <span class="w-1.5 h-1.5 rounded-full bg-primary/40 mt-1.5 shrink-0"></span>
+                                            <span>Managing campaigns for multi-industry brands while keeping tone and
+                                                identity consistent</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="border-l-2 border-primary/50 pl-6 my-8">
+                                    <p
+                                        class="text-zinc-500 dark:text-primary/40 text-[10px] uppercase tracking-[0.4em] mb-2 font-bold">
+                                        Marketing Approach</p>
+                                    <p
+                                        class="text-zinc-700 dark:text-primary/80 text-lg font-medium leading-relaxed italic">
+                                        “Content with strategy, communication with purpose — growth that’s real, not
+                                        accidental.”
+                                    </p>
+                                </div>
                             </div>
                         </div>
                         <!-- Featured Image / Visual Accent -->
@@ -434,69 +559,283 @@
                     </div>
                 </div>
                 <!-- Irregular Editorial Grid -->
-                <div class="editorial-grid space-y-12 md:space-y-0">
-                    <!-- Project 01 - Emarrak Development (Featured Wide) -->
-                    <div class="col-span-12 md:col-span-8 project-tile aspect-[16/10] bg-zinc-900 rounded-lg">
-                        <img alt="Emarrak Development Digital Growth"
-                            class="h-full w-full object-cover brightness-75 hover:brightness-100 transition-all duration-700"
-                            data-alt="Emarrak Digital Growth Dashboard" src="images/emarrak.png" />
+                <div class="space-y-24">
+                    <!-- Project 01 - Raqia Property (Full Width) -->
+                    <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
                         <div
-                            class="project-overlay absolute inset-0 bg-background-dark/80 backdrop-blur-sm flex flex-col p-10 justify-end">
-                            <div class="mt-auto">
-                                <span class="text-xs font-mono text-primary mb-2 block">01 / DIGITAL
-                                    TRANSFORMATION</span>
-                                <h3 class="text-3xl md:text-5xl font-black uppercase tracking-tighter text-white">
-                                    Emarrak Development</h3>
-                                <p class="text-zinc-300 text-sm md:text-base mt-4 max-w-xl">
-                                    Full digital presence build-up &amp; rebranding for a 25-year-old developer.
-                                    <br /><br />
-                                    <span class="font-bold text-white">Impact:</span> 2M+ organic views on TikTok,
-                                    widespread platform expansion (LinkedIn, Twitter, YouTube), and SEO dominance.
-                                    Revamping the brand to reflect its established market power.
+                            class="lg:col-span-7 project-tile aspect-[16/10] bg-zinc-900 rounded-lg overflow-hidden group">
+                            <img alt="Raqia Property Development Digital Launch"
+                                class="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
+                                src="images/raqia.png" />
+                            <div class="absolute top-6 left-6 flex gap-2">
+                                <span
+                                    class="px-3 py-1 bg-primary text-background-dark text-[10px] font-bold uppercase rounded-full">New
+                                    Launch</span>
+                                <span
+                                    class="px-3 py-1 bg-white/20 backdrop-blur-md text-white text-[10px] font-bold uppercase rounded-full">Branding</span>
+                            </div>
+                        </div>
+                        <div class="lg:col-span-5 flex flex-col gap-6">
+                            <div>
+                                <span class="text-xs font-mono text-primary/60 mb-2 block tracking-widest">REAL ESTATE /
+                                    CASE STUDY 01</span>
+                                <h3
+                                    class="text-4xl font-black uppercase tracking-tighter text-zinc-900 dark:text-white mb-2">
+                                    Raqia Property Development</h3>
+                                <p
+                                    class="text-zinc-500 dark:text-zinc-400 font-bold text-sm tracking-widest uppercase mb-4">
+                                    Duration: 3 Months</p>
+                            </div>
+
+                            <div class="space-y-4">
+                                <p class="text-zinc-800 dark:text-primary/90 text-base leading-relaxed">
+                                    Transformed a zero-presence startup into an established brand with a solid marketing
+                                    system and professional positioning.
                                 </p>
-                                <div class="mt-6 flex flex-wrap gap-3">
-                                    <a href="https://www.facebook.com/emmarekeg" target="_blank"
-                                        class="px-4 py-2 bg-blue-600 text-white text-[10px] font-bold uppercase rounded-full hover:bg-blue-500">Facebook</a>
-                                    <a href="https://www.instagram.com/emarrakdevelopment/" target="_blank"
-                                        class="px-4 py-2 bg-pink-600 text-white text-[10px] font-bold uppercase rounded-full hover:bg-pink-500">Instagram</a>
-                                    <a href="https://www.tiktok.com/@emarrakdevelopment?_t=ZS-8zdZWL4Tk8e&_r=1"
-                                        target="_blank"
-                                        class="px-4 py-2 bg-black text-white text-[10px] font-bold uppercase rounded-full hover:bg-zinc-800">TikTok</a>
+                                <div class="grid grid-cols-2 gap-4">
+                                    <div class="p-4 rounded border border-zinc-200 dark:border-zinc-800">
+                                        <p class="text-[10px] font-bold text-zinc-400 uppercase mb-2">Challenge</p>
+                                        <p class="text-xs text-zinc-600 dark:text-zinc-400">No social presence, random
+                                            sales efforts, and zero brand awareness.</p>
+                                    </div>
+                                    <div
+                                        class="p-4 rounded border border-zinc-200 dark:border-zinc-800 bg-zinc-50 dark:bg-zinc-900/50">
+                                        <p class="text-[10px] font-bold text-primary uppercase mb-2">Strategy</p>
+                                        <p class="text-xs text-zinc-600 dark:text-zinc-400">Built trust-based content,
+                                            defined brand story, and empowered sales team.</p>
+                                    </div>
+                                </div>
+                                <ul class="space-y-2">
+                                    <li class="flex items-center gap-2 text-sm text-zinc-600 dark:text-zinc-400">
+                                        <span class="material-symbols-outlined text-primary text-lg">check_circle</span>
+                                        Built 1,000+ followers in 2 months (Zero start)
+                                    </li>
+                                    <li class="flex items-center gap-2 text-sm text-zinc-600 dark:text-zinc-400">
+                                        <span class="material-symbols-outlined text-primary text-lg">check_circle</span>
+                                        Unified Visual & Verbal Identity
+                                    </li>
+                                    <li class="flex items-center gap-2 text-sm text-zinc-600 dark:text-zinc-400">
+                                        <span class="material-symbols-outlined text-primary text-lg">check_circle</span>
+                                        Trained sales team as Real Estate Advisors
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <div class="flex flex-wrap gap-3 pt-4">
+                                <a href="https://www.facebook.com/share/p/1BoKZ2t3yB/" target="_blank"
+                                    class="px-5 py-2.5 bg-zinc-900 dark:bg-white text-white dark:text-zinc-900 text-[10px] font-bold uppercase rounded-lg hover:scale-105 transition-transform">View
+                                    Campaign 1</a>
+                                <a href="https://www.instagram.com/raqia.property.development" target="_blank"
+                                    class="px-5 py-2.5 border border-zinc-900 dark:border-white text-zinc-900 dark:text-white text-[10px] font-bold uppercase rounded-lg hover:bg-zinc-900 hover:text-white dark:hover:bg-white dark:hover:text-zinc-900 transition-all">Instagram
+                                    Profile</a>
+                                <a href="https://www.facebook.com/share/p/1A8vukpmzw/" target="_blank"
+                                    class="px-3 py-2.5 bg-zinc-100 dark:bg-zinc-800 text-zinc-500 text-[10px] font-bold uppercase rounded-lg">#2</a>
+                                <a href="https://www.facebook.com/share/p/1MByneNggc/" target="_blank"
+                                    class="px-3 py-2.5 bg-zinc-100 dark:bg-zinc-800 text-zinc-500 text-[10px] font-bold uppercase rounded-lg">#3</a>
+                                <a href="https://www.facebook.com/share/p/1AWUdTFrmp/" target="_blank"
+                                    class="px-3 py-2.5 bg-zinc-100 dark:bg-zinc-800 text-zinc-500 text-[10px] font-bold uppercase rounded-lg">#4</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 02 - Emarrak (Full Width Reverse) -->
+                    <div
+                        class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start pt-12 border-t border-zinc-100 dark:border-zinc-800">
+                        <div class="lg:col-span-5 order-2 lg:order-1 flex flex-col gap-6">
+                            <div>
+                                <span class="text-xs font-mono text-primary/60 mb-2 block tracking-widest">REAL ESTATE /
+                                    CASE STUDY 02</span>
+                                <h3
+                                    class="text-4xl font-black uppercase tracking-tighter text-zinc-900 dark:text-white mb-2">
+                                    Emarrak Development</h3>
+                                <p
+                                    class="text-zinc-500 dark:text-zinc-400 font-bold text-sm tracking-widest uppercase mb-4">
+                                    Aug 2025 – Present</p>
+                            </div>
+
+                            <div class="space-y-4">
+                                <p class="text-zinc-800 dark:text-primary/90 text-base leading-relaxed">
+                                    Scaling a 25-year industry leader’s digital authority across multiple regions (Egypt
+                                    & Saudi Arabia) with high-impact content.
+                                </p>
+                                <div class="grid grid-cols-2 gap-4">
+                                    <div
+                                        class="p-4 rounded border border-zinc-200 dark:border-zinc-800 bg-zinc-50 dark:bg-zinc-900/50">
+                                        <p class="text-[10px] font-bold text-primary uppercase mb-2">Innovation</p>
+                                        <p class="text-xs text-zinc-600 dark:text-zinc-400">Viral TikTok strategy (2M+
+                                            organic views) showing the human side of corporate power.</p>
+                                    </div>
+                                    <div class="p-4 rounded border border-zinc-200 dark:border-zinc-800">
+                                        <p class="text-[10px] font-bold text-zinc-400 uppercase mb-2">Expansion</p>
+                                        <p class="text-xs text-zinc-600 dark:text-zinc-400">Global platform launch:
+                                            LinkedIn, YouTube, Twitter, and full Google SEO lift.</p>
+                                    </div>
+                                </div>
+                                <ul class="space-y-2">
+                                    <li class="flex items-center gap-2 text-sm text-zinc-600 dark:text-zinc-400">
+                                        <span class="material-symbols-outlined text-primary text-lg">bolt</span>
+                                        2M+ Organic Views via strategic viral content
+                                    </li>
+                                    <li class="flex items-center gap-2 text-sm text-zinc-600 dark:text-zinc-400">
+                                        <span class="material-symbols-outlined text-primary text-lg">public</span>
+                                        SEO Dominance for Saudi & Egypt projects
+                                    </li>
+                                    <li class="flex items-center gap-2 text-sm text-zinc-600 dark:text-zinc-400">
+                                        <span class="material-symbols-outlined text-primary text-lg">trending_up</span>
+                                        Significant follower growth & Brand Authority
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <div class="flex flex-wrap gap-3 pt-4">
+                                <a href="https://www.facebook.com/emmarekeg" target="_blank"
+                                    class="size-10 flex items-center justify-center border border-zinc-200 dark:border-zinc-800 rounded-lg hover:border-primary group transition-colors">
+                                    <svg class="size-4 fill-zinc-600 dark:fill-primary group-hover:fill-zinc-900 dark:group-hover:fill-white transition-colors"
+                                        viewBox="0 0 24 24">
+                                        <path
+                                            d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.791-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
+                                    </svg>
+                                </a>
+                                <a href="https://www.instagram.com/emarrakdevelopment/" target="_blank"
+                                    class="size-10 flex items-center justify-center border border-zinc-200 dark:border-zinc-800 rounded-lg hover:border-primary group transition-colors">
+                                    <svg class="size-4 fill-zinc-600 dark:fill-primary group-hover:fill-zinc-900 dark:group-hover:fill-white transition-colors"
+                                        viewBox="0 0 24 24">
+                                        <path
+                                            d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
+                                    </svg>
+                                </a>
+                                <a href="https://www.tiktok.com/@emarrakdevelopment" target="_blank"
+                                    class="size-10 flex items-center justify-center border border-zinc-200 dark:border-zinc-800 rounded-lg hover:border-primary group transition-colors">
+                                    <svg class="size-4 fill-zinc-600 dark:fill-primary group-hover:fill-zinc-900 dark:group-hover:fill-white transition-colors"
+                                        viewBox="0 0 24 24">
+                                        <path
+                                            d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1.04-.1z" />
+                                    </svg>
+                                </a>
+                                <a href="https://www.linkedin.com/in/emarrak-development-112750379/" target="_blank"
+                                    class="size-10 flex items-center justify-center border border-zinc-200 dark:border-zinc-800 rounded-lg hover:border-primary group transition-colors">
+                                    <svg class="size-4 fill-zinc-600 dark:fill-primary group-hover:fill-zinc-900 dark:group-hover:fill-white transition-colors"
+                                        viewBox="0 0 24 24">
+                                        <path
+                                            d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
+                                    </svg>
+                                </a>
+                                <a href="https://www.youtube.com/@EmarrakPropertydevelopment" target="_blank"
+                                    class="size-10 flex items-center justify-center border border-zinc-200 dark:border-zinc-800 rounded-lg hover:border-primary group transition-colors">
+                                    <svg class="size-4 fill-zinc-600 dark:fill-primary group-hover:fill-zinc-900 dark:group-hover:fill-white transition-colors"
+                                        viewBox="0 0 24 24">
+                                        <path
+                                            d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                        <div
+                            class="lg:col-span-7 order-1 lg:order-2 project-tile aspect-[16/10] bg-zinc-900 rounded-lg overflow-hidden group">
+                            <img alt="Emarrak Development Digital Authority"
+                                class="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
+                                src="images/emarrak.png" />
+                        </div>
+                    </div>
+
+                    <!-- Additional Content & Copywriting Projects -->
+                    <div class="pt-24 border-t border-zinc-100 dark:border-zinc-800">
+                        <div class="mb-12">
+                            <h4 class="text-2xl font-black uppercase tracking-tighter text-zinc-900 dark:text-white">
+                                Content Creation &amp; Copywriting</h4>
+                            <p class="text-zinc-500 dark:text-zinc-400 text-sm mt-2">Collaborating with 30+ clients to
+                                tell authentic brand stories.</p>
+                        </div>
+
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                            <!-- Category 1: Furniture -->
+                            <div
+                                class="p-8 rounded-xl bg-zinc-50 dark:bg-neutral-800/40 border border-zinc-200 dark:border-white/10 flex flex-col gap-6">
+                                <div
+                                    class="size-12 rounded-lg bg-zinc-900 dark:bg-primary flex items-center justify-center text-white dark:text-background-dark">
+                                    <span class="material-symbols-outlined">deck</span>
+                                </div>
+                                <div>
+                                    <h5 class="text-lg font-bold text-zinc-900 dark:text-white mb-2">Furniture Industry
+                                    </h5>
+                                    <p class="text-xs text-zinc-500 dark:text-zinc-400 leading-relaxed">Storytelling and
+                                        product positioning for premium furniture brands.</p>
+                                </div>
+                                <div class="flex flex-wrap gap-2 mt-auto">
+                                    <a href="https://www.facebook.com/share/p/1NqxyJ7yfJ/" target="_blank"
+                                        class="px-3 py-1.5 bg-black/5 dark:bg-white/5 text-[10px] font-bold uppercase rounded hover:bg-primary hover:text-background-dark transition-all">Link
+                                        1</a>
+                                    <a href="https://www.facebook.com/share/r/17cJxN3KGT/" target="_blank"
+                                        class="px-3 py-1.5 bg-black/5 dark:bg-white/5 text-[10px] font-bold uppercase rounded hover:bg-primary hover:text-background-dark transition-all">Reel
+                                        1</a>
+                                    <a href="https://www.facebook.com/share/r/17wakmK1wc/" target="_blank"
+                                        class="px-3 py-1.5 bg-black/5 dark:bg-white/5 text-[10px] font-bold uppercase rounded hover:bg-primary hover:text-background-dark transition-all">Reel
+                                        2</a>
+                                    <a href="https://www.facebook.com/share/r/1XN9FJhtsv/" target="_blank"
+                                        class="px-3 py-1.5 bg-black/5 dark:bg-white/5 text-[10px] font-bold uppercase rounded hover:bg-primary hover:text-background-dark transition-all">Reel
+                                        3</a>
+                                    <a href="https://www.facebook.com/share/p/1MJwvju3eD/" target="_blank"
+                                        class="px-3 py-1.5 bg-black/5 dark:bg-white/5 text-[10px] font-bold uppercase rounded hover:bg-primary hover:text-background-dark transition-all">Post</a>
+                                </div>
+                            </div>
+
+                            <!-- Category 2: Diverse Industries -->
+                            <div
+                                class="p-8 rounded-xl bg-zinc-50 dark:bg-neutral-800/40 border border-zinc-200 dark:border-white/10 flex flex-col gap-6">
+                                <div
+                                    class="size-12 rounded-lg bg-zinc-900 dark:bg-primary flex items-center justify-center text-white dark:text-background-dark">
+                                    <span class="material-symbols-outlined">category</span>
+                                </div>
+                                <div>
+                                    <h5 class="text-lg font-bold text-zinc-900 dark:text-white mb-2">Multi-Industry Work
+                                    </h5>
+                                    <p class="text-xs text-zinc-500 dark:text-zinc-400 leading-relaxed">Strategic
+                                        content across diverse sectors including lifestyle and business.</p>
+                                </div>
+                                <div class="flex flex-wrap gap-2 mt-auto">
+                                    <a href="https://www.facebook.com/share/p/17tKj72Pzf/" target="_blank"
+                                        class="px-3 py-1.5 bg-black/5 dark:bg-white/5 text-[10px] font-bold uppercase rounded hover:bg-primary hover:text-background-dark transition-all">Social
+                                        1</a>
+                                    <a href="https://www.facebook.com/share/p/1BBaLiQiir/" target="_blank"
+                                        class="px-3 py-1.5 bg-black/5 dark:bg-white/5 text-[10px] font-bold uppercase rounded hover:bg-primary hover:text-background-dark transition-all">Social
+                                        2</a>
+                                    <a href="https://www.facebook.com/share/p/1D6QLuop2D/" target="_blank"
+                                        class="px-3 py-1.5 bg-black/5 dark:bg-white/5 text-[10px] font-bold uppercase rounded hover:bg-primary hover:text-background-dark transition-all">Social
+                                        3</a>
+                                    <a href="https://www.facebook.com/share/p/1WLR6DYFAm/" target="_blank"
+                                        class="px-3 py-1.5 bg-black/5 dark:bg-white/5 text-[10px] font-bold uppercase rounded hover:bg-primary hover:text-background-dark transition-all">Post</a>
+                                </div>
+                            </div>
+
+                            <!-- Category 3: Brand Creation -->
+                            <div
+                                class="p-8 rounded-xl bg-zinc-900 dark:bg-primary/10 border border-zinc-800 dark:border-primary/20 flex flex-col gap-6 shadow-xl">
+                                <div
+                                    class="size-12 rounded-lg bg-primary text-background-dark flex items-center justify-center">
+                                    <span class="material-symbols-outlined">auto_awesome</span>
+                                </div>
+                                <div>
+                                    <h5 class="text-lg font-bold text-white dark:text-primary mb-2">Brands From Scratch
+                                    </h5>
+                                    <p class="text-xs text-zinc-400 dark:text-primary/70 leading-relaxed">Conceptualized
+                                        and executed from idea to full digital presence.</p>
+                                </div>
+                                <div class="flex flex-wrap gap-2 mt-auto">
+                                    <a href="https://www.instagram.com/reel/DCZdr6BM-X6/" target="_blank"
+                                        class="px-3 py-1.5 bg-white/10 text-white text-[10px] font-bold uppercase rounded hover:bg-primary hover:text-background-dark transition-all">Brand
+                                        1</a>
+                                    <a href="https://www.instagram.com/p/DEiExhVooDz/" target="_blank"
+                                        class="px-3 py-1.5 bg-white/10 text-white text-[10px] font-bold uppercase rounded hover:bg-primary hover:text-background-dark transition-all">Brand
+                                        2</a>
+                                    <a href="https://www.instagram.com/p/DBoiwzPokJo/" target="_blank"
+                                        class="px-3 py-1.5 bg-white/10 text-white text-[10px] font-bold uppercase rounded hover:bg-primary hover:text-background-dark transition-all">Brand
+                                        3</a>
+                                    <a href="https://www.instagram.com/reel/DBtrkrLIN4w/" target="_blank"
+                                        class="px-3 py-1.5 bg-white/10 text-white text-[10px] font-bold uppercase rounded hover:bg-primary hover:text-background-dark transition-all">Brand
+                                        4</a>
                                 </div>
                             </div>
                         </div>
-                    </div>
-
-                    <!-- Project 02 - Raqia Property (Portrait) -->
-                    <div class="col-span-12 md:col-span-4 md:mt-12 project-tile aspect-[4/5] bg-zinc-900 rounded-lg">
-                        <img alt="Raqia Property Branding"
-                            class="h-full w-full object-cover grayscale hover:grayscale-0 transition-all duration-700"
-                            data-alt="Raqia Branding Mockup" src="images/raqia.png" />
-                        <div
-                            class="project-overlay absolute inset-0 bg-background-dark/80 backdrop-blur-sm flex flex-col justify-end p-8">
-                            <span class="text-xs font-mono tracking-tighter text-primary/80 mb-2">02 / BRAND
-                                LAUNCH</span>
-                            <h3 class="text-3xl font-black uppercase tracking-tighter text-white">Raqia Property</h3>
-                            <p class="text-xs text-zinc-400 mt-2 uppercase tracking-widest">Startup to Established
-                                Brand</p>
-                            <p class="text-sm font-medium tracking-wide text-zinc-300 mt-4">
-                                Built complete marketing foundation from zero. Reached ~1,000 followers in 2 months
-                                with a trust-based content strategy.
-                            </p>
-                            <div
-                                class="mt-6 flex items-center gap-2 text-[10px] font-bold uppercase tracking-[0.2em] text-white">
-                                <a href="https://www.facebook.com/share/p/1BoKZ2t3yB/" target="_blank"
-                                    class="hover:underline">View Campaign</a> <span
-                                    class="material-symbols-outlined text-sm">arrow_outward</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Placeholder for future projects (Small) -->
-                    <div
-                        class="col-span-12 md:col-span-12 p-12 mt-12 border border-zinc-200 dark:border-zinc-800 rounded-lg text-center">
-                        <h3 class="text-xl font-bold text-zinc-500 uppercase tracking-widest">More Case Studies
-                            Available Upon Request</h3>
                     </div>
                 </div>
             </main>
@@ -585,8 +924,8 @@
                         </h2>
                         <div class="pt-10">
                             <a class="inline-flex items-center gap-3 text-2xl font-medium hover:gap-6 transition-all group text-zinc-900 dark:text-white"
-                                href="mailto:hello@ghadamarketing.com">
-                                hello@ghadamarketing.com
+                                href="mailto:elashmawyghada89@gmail.com">
+                                elashmawyghada89@gmail.com
                                 <span
                                     class="material-symbols-outlined text-3xl transition-transform group-hover:translate-x-2">arrow_forward</span>
                             </a>
@@ -604,36 +943,21 @@
                     <h2 class="text-4xl font-black uppercase tracking-tighter text-zinc-900 dark:text-white mb-6">
                         GHADA ELASHMAWY</h2>
                     <a class="text-lg font-medium text-zinc-500 dark:text-primary/60 hover:text-zinc-900 dark:hover:text-white transition-colors underline decoration-zinc-300 dark:decoration-primary/20 underline-offset-8"
-                        href="mailto:hello@ghadamarketing.com">hello@ghadamarketing.com</a>
+                        href="mailto:elashmawyghada89@gmail.com">elashmawyghada89@gmail.com</a>
                 </div>
                 <div class="grid grid-cols-2 gap-20">
                     <div class="flex flex-col gap-3">
                         <span
                             class="text-[10px] font-black uppercase tracking-[0.3em] text-zinc-400 dark:text-white/40 mb-2">Social</span>
-                        <div class="flex gap-4 mt-2">
-                            <a href="https://www.facebook.com/emmarekeg" target="_blank" class="group">
+                        <div class="flex flex-wrap gap-4 mt-2">
+                            <a href="https://www.facebook.com/ghadh.al.shmawy" target="_blank" class="group">
                                 <svg class="size-5 fill-zinc-900 dark:fill-primary group-hover:fill-zinc-600 dark:group-hover:fill-white transition-colors"
                                     viewBox="0 0 24 24" aria-hidden="true">
                                     <path
                                         d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.791-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
                                 </svg>
                             </a>
-                            <a href="https://www.instagram.com/emarrakdevelopment/" target="_blank" class="group">
-                                <svg class="size-5 fill-zinc-900 dark:fill-primary group-hover:fill-zinc-600 dark:group-hover:fill-white transition-colors"
-                                    viewBox="0 0 24 24" aria-hidden="true">
-                                    <path
-                                        d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
-                                </svg>
-                            </a>
-                            <a href="https://www.tiktok.com/@emarrakdevelopment?_t=ZS-8zdZWL4Tk8e&_r=1" target="_blank"
-                                class="group">
-                                <svg class="size-5 fill-zinc-900 dark:fill-primary group-hover:fill-zinc-600 dark:group-hover:fill-white transition-colors"
-                                    viewBox="0 0 24 24" aria-hidden="true">
-                                    <path
-                                        d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1.04-.1z" />
-                                </svg>
-                            </a>
-                            <a href="https://www.linkedin.com/in/emarrak-development-112750379/" target="_blank"
+                            <a href="https://www.linkedin.com/in/ghada-elashmawy-76618b252/" target="_blank"
                                 class="group">
                                 <svg class="size-5 fill-zinc-900 dark:fill-primary group-hover:fill-zinc-600 dark:group-hover:fill-white transition-colors"
                                     viewBox="0 0 24 24" aria-hidden="true">
@@ -641,11 +965,11 @@
                                         d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
                                 </svg>
                             </a>
-                            <a href="https://www.youtube.com/@EmarrakPropertydevelopment" target="_blank" class="group">
+                            <a href="https://wa.me/201022816494" target="_blank" class="group">
                                 <svg class="size-5 fill-zinc-900 dark:fill-primary group-hover:fill-zinc-600 dark:group-hover:fill-white transition-colors"
                                     viewBox="0 0 24 24" aria-hidden="true">
                                     <path
-                                        d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
+                                        d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.417-.003 6.557-5.338 11.892-11.893 11.892-1.997-.001-3.951-.5-5.688-1.448l-6.305 1.652zm6.599-3.835c1.516.901 3.1 1.378 4.731 1.38h.005c5.424 0 9.837-4.412 9.84-9.839.002-2.628-1.021-5.1-2.883-6.963-1.861-1.864-4.331-2.889-6.961-2.891-5.424 0-9.836 4.411-9.84 9.838-.001 1.762.467 3.48 1.353 4.981l-.88 3.213 3.285-.861zm11.458-7.614c-.314-.157-1.86-.918-2.148-1.023-.288-.105-.499-.157-.708.157-.21.314-.812 1.023-.995 1.232-.183.21-.366.236-.68.079-.314-.157-1.325-.488-2.524-1.558-.934-.833-1.564-1.862-1.747-2.177-.183-.314-.019-.485.137-.641.141-.14.314-.366.471-.55.157-.183.21-.314.314-.524.105-.21.053-.393-.026-.55-.079-.157-.708-1.703-.97-2.332-.255-.615-.515-.531-.708-.541-.183-.008-.393-.01-.603-.01s-.55.079-.838.393c-.288.314-1.1 1.074-1.1 2.619s1.127 3.038 1.284 3.248c.157.21 2.217 3.386 5.371 4.75.751.325 1.337.519 1.795.665.754.239 1.442.206 1.984.125.603-.09 1.86-.76 2.121-1.467.261-.708.261-1.31.183-1.467-.078-.157-.288-.236-.602-.393z" />
                                 </svg>
                             </a>
                         </div>
